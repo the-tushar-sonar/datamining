@@ -1,0 +1,6 @@
+import pandas as pd 
+data = pd.read_csv('sales_data.csv') 
+data['Date'] = pd.to_datetime(data['Date'], dayfirst=True) 
+monthly_sales = data.groupby(data['Date'].dt.to_period('M'))['Sales'].sum() 
+print("Total Sales by Month:") 
+print(monthly_sales)

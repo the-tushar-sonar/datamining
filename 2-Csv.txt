@@ -1,0 +1,8 @@
+import pandas as pd 
+df = pd.read_csv("data.csv")  
+print("Dataset:\n", df.head()) 
+mean_value = df['Scores'].mean() 
+std_deviation = df['Scores'].std() 
+print("\nMean: ", mean_value) 
+85 
+print("Standard Deviation: ", std_deviation)
